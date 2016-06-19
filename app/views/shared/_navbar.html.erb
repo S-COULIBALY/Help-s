@@ -1,0 +1,58 @@
+<div class="navbar-helps">
+  <!-- Logo -->
+  <a href="/" class="navbar-helps-brand">
+    <%= image_tag "helps.png" %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-helps-right hidden-xs hidden-sm">
+
+    <!-- Search form -->
+    <form action="" class="navbar-helps-search">
+      <input type="text" class="navbar-helps-search-input" placeholder="Barre de recherche">
+      <button type="submit" class="navbar-helps-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <!-- Text link -->
+      <%=link_to "Accueil", root_path,  class: "navbar-helps-item navbar-helps-link" %>
+      <%=link_to "Propos", about_path,  class: "navbar-helps-item navbar-helps-link" %>
+      <%=link_to "Contact", contact_path,  class: "navbar-helps-item navbar-helps-link" %>
+
+    <!-- Notification link-->
+    <a href="" class="navbar-helps-item navbar-helps-link">
+      <div class="badge-container">
+        <i class="fa fa-envelope-o"></i>
+        <div class="badge badge-blue">3</div>
+      </div>
+    </a>
+
+    <!-- Profile picture and dropdown -->
+    <div class="navbar-helps-item">
+      <div class="dropdown">
+        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-helps-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-helps-dropdown-menu">
+          <li><a href="#">Profil</a></li>
+          <li><a href="#">Tableau de bord</a></li>
+          <li><a href="#">Deconexion</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Button (call-to-action) -->
+    <a href="" class="navbar-helps-item navbar-helps-button btn">Services</a>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-helps-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-helps-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
