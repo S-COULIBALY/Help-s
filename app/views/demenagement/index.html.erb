@@ -1,0 +1,13 @@
+<h1>Demenagement#index</h1>
+
+<ul>
+<% @dems.each do |dem| %>
+  <li>
+    <%= dem.adresse_depart %>
+    <%= dem.type_logegement_depart %>
+    <%= dem.etage_depart %>
+<%end%>
+  </li>
+</ul>
+
+
