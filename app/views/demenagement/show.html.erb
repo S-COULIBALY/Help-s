@@ -1,2 +1,15 @@
-<h1>Demenagement#show</h1>
-<p>Find me in app/views/demenagement/show.html.erb</p>
+<h1>DÉTAIL DU DÉMÉNAGEMENT</h1>
+
+    <%= @demenagement.type_logegement_depart %> <br>
+    <%= @demenagement.etage_depart %> <br>
+    <%= @demenagement.ascenceur_depart %> <br>
+    <%= @demenagement.adresse_arrivee %> <br>
+    <%= @demenagement.type_logement_arrivee %> <br>
+    <%= @demenagement.etage_arrivee %> <br>
+    <%= @demenagement.ascenceur_arrivee %> <br>
+    <%= @demenagement.distance %> <br>
+    <%= @demenagement.volume %> <br>
+    <%= @demenagement.commentaire %> <br>
+
+    <div> <%=link_to "liste des DÉMÉNAGEMENTS", demenagement_index_path, class: "btn btn-success" %></div>
+

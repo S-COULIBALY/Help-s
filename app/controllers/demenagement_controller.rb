@@ -1,9 +1,18 @@
 class DemenagementController < ApplicationController
   def index
-    @dems= Demenagement.all
+    @demenagements= Demenagement.all
   end
 
   def show
-    @dem= Demenagement.find(params (:id))
+    @demenagement= Demenagement.find(params[:id])
   end
 end
+
+def new
+    @demenagement= Demenagement.new
+  end
+
+def create
+    @demenagement= Demenagement.new(demenagement_params)
+    @demenagement.save
+  end
