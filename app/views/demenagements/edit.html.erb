@@ -1,6 +1,10 @@
 <h2>FORMULAIRE</h2>
 
-<%= simple_form_for @demenagement do |f| %>
+<div class="container">
+ <div class="row">
+ <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+ <%= simple_form_for @demenagement do |f| %>
 
   <%= f.input :adresse_depart, placeholder: "12 résidence les taratres 92500 Rueil Malmaison", label: "which adresse_depart?" %>
   <%= f.input :type_logegement_depart, placeholder: "Appartement", label: "type_logegement_depart?" %>
@@ -15,4 +19,8 @@
   <%= f.input :commentaire, placeholder: "mais très grande et ascenceur étroit", label: "which commentaire?" %>
   <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
   <% end %>
+
+ </div>
+ </div>
+</div>
 
