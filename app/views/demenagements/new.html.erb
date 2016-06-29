@@ -7,17 +7,17 @@
  <%= simple_form_for @demenagement do |f| %>
 
   <%= f.input :adresse_depart, placeholder: "12 résidence les taratres 92500 Rueil Malmaison", label: "which adresse_depart?" %>
-  <%= f.input :type_logegement_depart, placeholder: "Appartement", label: "type_logegement_depart?" %>
-  <%= f.input :etage_depart, placeholder: "Oui", label: "etage_depart?" %>
+  <%= f.input :type_logegement_depart, placeholder: "appartement", label: "type_logegement_depart?" %>
+  <%= f.input :etage_depart, placeholder: "oui", label: "etage_depart?" %>
   <%= f.input :ascenceur_depart, placeholder: "(6 ème)", label: "ascenceur_depart?" %>
   <%= f.input :adresse_arrivee, placeholder: "12 résidence les taratres 92500 Rueil Malmaison", label: "adresse_arrivee?" %>
-  <%= f.input :type_logement_arrivee, placeholder: "Garage", label: "type_logement_arrivee?" %>
+  <%= f.input :type_logement_arrivee, placeholder: "garage", label: "type_logement_arrivee?" %>
   <%= f.input :etage_arrivee, placeholder: "12 ème", label: "etage_arrivee?" %>
-  <%= f.input :ascenceur_arrivee, placeholder: "Non", label: "ascenceur_arrivee,?" %>
+  <%= f.input :ascenceur_arrivee, placeholder: "non", label: "ascenceur_arrivee,?" %>
   <%= f.input :distance, placeholder: "145 kms", label: "distance?"  %>
   <%= f.input :volume, placeholder: "25 M3", label: "which volume?" %>
   <%= f.input :commentaire, placeholder: "mais très grande et ascenceur étroit", label: "which commentaire?" %>
-  <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+  <%= f.button :submit, "ajouter", class: "btn btn-primary" %>
   <% end %>
 
  </div>

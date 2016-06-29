@@ -14,7 +14,8 @@ def new
 
 def create
     @demenagement= Demenagement.new(demenagement_params)
-    if @demenagement.save redirect_to demenagements_path
+    if @demenagement.save
+      redirect_to demenagements_path
     else render :new
   end
 end
@@ -33,6 +34,8 @@ def update
 
 def destroy
     @demenagement= Demenagement.find(params[:id])
+    @demenagement.destroy
+    redirect_to demenagements_path
   end
 
 
