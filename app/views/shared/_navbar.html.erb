@@ -4,6 +4,8 @@
     <%= image_tag "helps.png" %>
   </a>
 
+  <% if user_signed_in? %>
+
   <!-- Right Navigation -->
   <div class="navbar-helps-right hidden-xs hidden-sm">
 
@@ -35,14 +37,22 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-helps-dropdown-menu">
           <li><a href="#">Profil</a></li>
           <li><a href="#">Tableau de bord</a></li>
-          <li><a href="#">Deconexion</a></li>
+           <li><a <%=link_to "Déconnexion", destroy_user_session_path, method: :delete %> </a></li>
         </ul>
       </div>
     </div>
 
     <!-- Button (call-to-action) -->
     <a href="" class="navbar-helps-item navbar-helps-button btn">Services</a>
+
+        <% else %>
+            <%=link_to "Inscription", new_user_registration_path, class: "navbar-helps-item navbar-helps-link" %>
+            <%=link_to "Connexion", new_user_session_path, class: "navbar-helps-item navbar-helps-link" %>
+        <% end %>
+
   </div>
+
+
 
   <!-- Dropdown appearing on mobile only -->
   <div class="navbar-helps-item hidden-md hidden-lg">
@@ -55,4 +65,6 @@
       </ul>
     </div>
   </div>
+
 </div>
+

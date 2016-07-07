@@ -11,5 +11,7 @@
     <%= @demenagement.volume %> <br>
     <%= @demenagement.commentaire %> <br>
 
-    <div> <%=link_to "liste des DÉMÉNAGEMENTS", demenagements_path, class: "btn btn-success" %></div>
-
+    <p>
+      <div> <%=link_to "liste des DÉMÉNAGEMENTS", demenagements_path, class: "btn btn-success" %></div>
+    </p>
+<div> <%=link_to "Supprimer", demenagement_path(@demenagement), method: :delete, class: "btn btn-warning" %></div>
