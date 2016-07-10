@@ -1,4 +1,8 @@
 class Demenagement < ApplicationRecord
+
+belongs_to :user
+
+  validates :user, presence: true
   validates :adresse_depart, presence: true
   validates :type_logegement_depart, presence: true
   validates :etage_depart, presence: true

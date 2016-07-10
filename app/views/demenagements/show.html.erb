@@ -1,17 +1,36 @@
-<h1>DÉTAIL DU DÉMÉNAGEMENT</h1>
 
-    <%= @demenagement.type_logegement_depart %> <br>
-    <%= @demenagement.etage_depart %> <br>
-    <%= @demenagement.ascenceur_depart %> <br>
-    <%= @demenagement.adresse_arrivee %> <br>
-    <%= @demenagement.type_logement_arrivee %> <br>
-    <%= @demenagement.etage_arrivee %> <br>
-    <%= @demenagement.ascenceur_arrivee %> <br>
-    <%= @demenagement.distance %> <br>
-    <%= @demenagement.volume %> <br>
-    <%= @demenagement.commentaire %> <br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
 
-    <p>
-      <div> <%=link_to "liste des DÉMÉNAGEMENTS", demenagements_path, class: "btn btn-success" %></div>
-    </p>
-<div> <%=link_to "Supprimer", demenagement_path(@demenagement), method: :delete, class: "btn btn-warning" %></div>
+    <h1 class= "btn btn-info">DÉTAIL DU DÉMÉNAGEMENT</h1>
+
+<br> <br>
+
+          <div class= "btn btn-default">
+              <% if @demenagement.user %>
+
+                <p> Posted by <%= @demenagement.user.email %> </p>
+
+              <% end %>
+          </div>
+<br>
+        <%= @demenagement.type_logegement_depart %> <br>
+        <%= @demenagement.etage_depart %> <br>
+        <%= @demenagement.ascenceur_depart %> <br>
+        <%= @demenagement.adresse_arrivee %> <br>
+        <%= @demenagement.type_logement_arrivee %> <br>
+        <%= @demenagement.etage_arrivee %> <br>
+        <%= @demenagement.ascenceur_arrivee %> <br>
+        <%= @demenagement.distance %> <br>
+        <%= @demenagement.volume %> <br>
+        <%= @demenagement.commentaire %> <br>
+
+        <p>
+          <div> <%=link_to "liste des DÉMÉNAGEMENTS", demenagements_path, class: "btn btn-success" %></div>
+        </p>
+    <div> <%=link_to "Supprimer", demenagement_path(@demenagement), method: :delete, class: "btn btn-warning" %></div>
+
+    </div>
+  </div>
+</div>

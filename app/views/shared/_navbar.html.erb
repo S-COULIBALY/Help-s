@@ -43,7 +43,7 @@
     </div>
 
     <!-- Button (call-to-action) -->
-    <a href="" class="navbar-helps-item navbar-helps-button btn">Services</a>
+    <%=link_to "Liste de demandes", demenagements_path,  class: "navbar-helps-item navbar-helps-button btn" %>
 
         <% else %>
             <%=link_to "Inscription", new_user_registration_path, class: "navbar-helps-item navbar-helps-link" %>

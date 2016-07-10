@@ -1,5 +1,7 @@
 class DemenagementsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @demenagements= Demenagement.all
   end
@@ -14,6 +16,7 @@ def new
 
 def create
     @demenagement= Demenagement.new(demenagement_params)
+    @demenagement.user = current_user
     if @demenagement.save
       redirect_to demenagements_path
     else render :new

@@ -1,24 +1,68 @@
-<div> <%=link_to "Page d'accueil", root_path, class: "btn btn-primary" %> </div>
 
-<h1>LISTE DES DÉMÉNAGEMENTS</h1>
 
-<ul>
-<% @demenagements.each do |demenagement| %>
-  <li>
-    <%= demenagement.adresse_depart %> <br> <div>
-    <%= demenagement.type_logegement_depart %> <br>
-    <%= demenagement.etage_depart %> <br>
-    <%= demenagement.ascenceur_depart %> <br>
-    <%= demenagement.adresse_arrivee %> <br>
-    <%= demenagement.type_logement_arrivee %> <br>
-    <%= demenagement.etage_arrivee %> <br>
-    <%= demenagement.ascenceur_arrivee %> <br>
-    <%= demenagement.distance %> <br>
-    <%= demenagement.volume %> <br>
-    <%= demenagement.commentaire %> <br>
-    <%=link_to "Détail", demenagement_path(demenagement), class: "btn btn-primary" %> </div>
-    <div> <%=link_to "Modifier", edit_demenagement_path(demenagement), class: "btn btn-danger" %></div>
-  </li>
-  <%end%>
-</ul>
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+    <h1>Liste des déménagements</h1>
+
+    <ul>
+        <% @demenagements.each do |demenagement| %>
+          <li>
+            <span>ADRESSE DE DEPART: &nbsp </span> <%= demenagement.adresse_depart %> <br> <div>
+          </li>
+
+          <li>
+            <%= demenagement.type_logegement_depart %> <br>
+          </li>
+
+          <li>
+            <%= demenagement.etage_depart %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.ascenceur_depart %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.adresse_arrivee %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.type_logement_arrivee %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.etage_arrivee %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.ascenceur_arrivee %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.distance %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.volume %> <br>
+          </li>
+
+          <li>
+              <%= demenagement.commentaire %> <br>
+          </li>
+
+          <div> <%=link_to "  Détail  ", demenagement_path(demenagement), class: "btn btn-primary" %> </div>
+
+          <div> <%=link_to "Modifier", edit_demenagement_path(demenagement), class: "btn btn-danger" %></div> <br>
+
+        <%end%>
+      </ul>
+     </div>
+
+
+  </div>
+</div>
+
 
